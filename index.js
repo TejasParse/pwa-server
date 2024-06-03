@@ -35,6 +35,14 @@ app.post('/sendNotification', (req, res) => {
     res.status(200).json({});
 });
 
+app.get("/", (req,res)=> {
+
+    return res.status(200).json({
+        message: "This is my world and you are living in it"
+    })
+
+})
+
 const port = 3000;
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
