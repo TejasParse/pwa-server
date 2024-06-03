@@ -42,7 +42,7 @@ app.post('/sendNotification', (req, res) => {
 app.get("/", (req,res)=> {
 
     return res.status(200).json({
-        message: "This is my world and you are living in it"
+        message: "This server is running"
     })
 
 })
