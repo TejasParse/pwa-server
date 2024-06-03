@@ -34,7 +34,9 @@ app.post('/sendNotification', (req, res) => {
         webpush.sendNotification(subscription, payload).catch(error => console.error(error));
     });
 
-    res.status(200).json({});
+    console.log("\n\n", "This is the length of subscriptions array", subscriptions.length);
+
+    res.status(200).json(subscriptions);
 });
 
 app.get("/", (req,res)=> {
