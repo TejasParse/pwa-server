@@ -3,10 +3,12 @@ const express = require('express');
 const webpush = require('web-push');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
+const cors = require("cors");
 
 dotenv.config();
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 const publicVapidKey = process.env.VAPID_PUBLIC_KEY;
